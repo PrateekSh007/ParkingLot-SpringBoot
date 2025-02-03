@@ -2,7 +2,9 @@ package com.example.ParkingLot2.entity;
 
 
 import com.example.ParkingLot2.model.VehicleType;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -10,6 +12,8 @@ import javax.persistence.*;
 @Entity
 @Setter
 @Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Vehicle {
 
     @Id
@@ -20,6 +24,8 @@ public class Vehicle {
 
     @Enumerated(EnumType.STRING)
     private VehicleType vehicleType ;
+
+    @ManyToOne()
 
 
 
